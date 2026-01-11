@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Spaarkz Academy | Madurai</title>
+
+<style>
+:root{
+  --primary:#487cca;
+  --secondary:#ffb703;
+  --bg:#f5f7fb;
+  --text:#222;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* ---------- HEADER ---------- */
+header{
+  background:var(--primary);
+  color:#fff;
+  padding:14px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+header h1{
+  font-size:24px;
+}
+
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:18px;
+  font-weight:600;
+}
+
+/* ---------- HERO ---------- */
+.hero{
+  background:
+    linear-gradient(rgba(1, 2, 4, 0.85),rgba(43, 96, 150, 0.85)),
+    url("https://images.unsplash.com/photo-1588072432836-e10032774350");
+  background-size:cover;
+  background-position:center;
+  color:#fff;
+  padding:80px 6%;
+}
+
+.hero h2{
+  font-size:38px;
+  max-width:700px;
+}
+
+.hero p{
+  margin-top:12px;
+  font-size:18px;
+  max-width:650px;
+  line-height:1.6;
+}
+
+.hero button{
+  margin-top:25px;
+  padding:14px 32px;
+  background:var(--secondary);
+  border:none;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* ---------- SECTIONS ---------- */
+section{
+  padding:60px 6%;
+}
+
+section h2{
+  color:var(--primary);
+  font-size:30px;
+  margin-bottom:25px;
+}
+
+/* ---------- GRID ---------- */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:#fff;
+  padding:25px;
+  border-radius:10px;
+  box-shadow:0 4px 16px rgba(0,0,0,.08);
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+}
+
+/* ---------- FORM ---------- */
+.form-box{
+  max-width:480px;
+  background:#fff;
+  padding:30px;
+  border-radius:10px;
+  box-shadow:0 4px 16px rgba(0,0,0,.08);
+}
+
+input, select{
+  width:100%;
+  padding:12px;
+  margin-bottom:15px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  font-size:15px;
+}
+
+.submit-btn{
+  width:100%;
+  padding:14px;
+  background:var(--primary);
+  color:#fff;
+  border:none;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* ---------- CONTACT ---------- */
+.contact{
+  background:var(--primary);
+  color:#fff;
+}
+
+/* ---------- FOOTER ---------- */
+footer{
+  background:#081f42;
+  color:#ccc;
+  text-align:center;
+  padding:15px;
+  font-size:14px;
+}
+
+/* ---------- WHATSAPP ---------- */
+.whatsapp{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  background:#25d366;
+  color:#fff;
+  padding:15px 18px;
+  border-radius:50%;
+  font-size:24px;
+  text-decoration:none;
+  box-shadow:0 4px 12px rgba(0,0,0,.3);
+}
+
+/* ---------- MOBILE OPTIMIZATION ---------- */
+@media(max-width:768px){
+  header{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  nav{
+    margin-top:10px;
+  }
+
+  nav a{
+    margin:0 10px;
+  }
+
+  .hero{
+    padding:60px 6%;
+  }
+
+  .hero h2{
+    font-size:28px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  section{
+    padding:45px 6%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Spaarkz Academy</h1>
+  <nav>
+    <a href="#courses">Courses</a>
+    <a href="#admission">Admission</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Where School Success Meets Competitive Excellence</h2>
+  <p>
+    Smart Digital Classrooms • Small Batch Size •
+    Government Officer & Senior Faculty
+  </p>
+  <button onclick="document.getElementById('admission').scrollIntoView()">Book Free Demo</button>
+</section>
+
+<section id="courses">
+  <h2>Our Courses</h2>
+  <div class="grid">
+    <div class="card"><strong>Engineering Exams</strong><br>TNEB AE, GATE, SSC JE</div>
+    <div class="card"><strong>Government Exams</strong><br>TNPSC Groups 1–4, IBPS, SSC</div>
+    <div class="card"><strong>School Tuition</strong><br>CBSE, ICSE, State Board</div>
+    <div class="card"><strong>Medical Foundation</strong><br>NEET & IIT-JEE</div>
+    <div class="card"><strong>Skill Training</strong><br>CRT, Spoken English, Programming</div>
+  </div>
+</section>
+
+<section id="admission">
+  <h2>Admission Enquiry</h2>
+  <div class="form-box">
+    <input type="text" placeholder="Student Name" required />
+    <input type="tel" placeholder="Mobile Number" required />
+    <input type="email" placeholder="Email (optional)" />
+    <select required>
+      <option value="">Select Course</option>
+      <option>School Tuition</option>
+      <option>TNPSC</option>
+      <option>Engineering Exams</option>
+      <option>NEET / IIT Foundation</option>
+      <option>Skill Training</option>
+    </select>
+    <button class="submit-btn">Submit Enquiry</button>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <p>
+    <strong>Spaarkz Academy</strong><br>
+    1st Floor, Plot No. 581,<br>
+    2nd East Main Road, Anna Nagar,<br>
+    Madurai – 625020<br><br>
+    📞 <strong>096777 11366</strong><br>
+    🕘 Mon – Sat | 9:00 AM – 8:00 PM
+  </p>
+</section>
+
+<footer>
+  © 2026 Spaarkz Academy | Demo Website
+</footer>
+
+<a class="whatsapp" href="https://wa.me/919677711366" target="_blank">💬</a>
+
+</body>
+</html>
